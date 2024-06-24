@@ -25,8 +25,14 @@ Building Sphinx documentation
 
 * This is only required for the new project. Just adding here for reference::
   
-    docker run -it --rm -v ./Doc:/docs sphinxdoc/sphinx:7.3.7 sphinx-quickstart
+    $ docker run -it --rm -v ./Doc:/docs sphinxdoc/sphinx:7.3.7 sphinx-quickstart
 
   
+* Building the html documentation locally::
 
-docker run -it --rm -v Doc:/docs sphinxdoc/sphinx sphinx-quickstart
+    $ docker run --rm -v ./Doc:/docs sphinxdoc/sphinx:7.3.7 make html
+
+* Building the pdf document, please note this is a big (around 1.2 GB) image due to
+  `LaTeX <https://www.latex-project.org/>` dependancies::
+
+    $ docker run --rm -v ./Doc:/docs sphinxdoc/sphinx-latexpdf:7.3.7 make latexpdf
