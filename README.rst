@@ -33,6 +33,6 @@ Building Sphinx documentation
     $ docker run --rm -v ./Doc:/docs sphinxdoc/sphinx:7.3.7 make html
 
 * Building the pdf document, please note this is a big (around 1.2 GB) image due to
-  `LaTeX <https://www.latex-project.org/>` dependancies::
+  `LaTeX <https://www.latex-project.org/>`_ dependancies::
 
     $ docker run --rm -v ./Doc:/docs sphinxdoc/sphinx-latexpdf:7.3.7 make latexpdf
